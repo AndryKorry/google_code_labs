@@ -1,0 +1,53 @@
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: "com.android.library"
+apply from: '../dependencies.gradle'
+
+
+android {
+    namespace 'com.vynokurov.affirmations'
+    compileSdkVersion configVersions.compileSdk
+
+    defaultConfig {
+        minSdkVersion configVersions.minSdk
+        targetSdkVersion configVersions.targetSdk
+        versionCode configVersions.versionCode
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = ['-Xjvm-default=enable']
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation androidx.coreKtx
+    implementation androidx.appCompat
+    implementation androidx.constrainLayout
+    implementation google.material
+
+    implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation 'org.mockito:mockito-core:5.2.0'
+}
