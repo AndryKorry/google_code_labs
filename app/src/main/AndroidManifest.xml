@@ -23,8 +23,7 @@
         <activity android:name="com.vynokurov.affirmations.AffirmationsActivity"/>
         <activity android:name="com.vynokurov.tiptime.TipTimeActivity"/>
         <activity android:name="com.vynokurov.dogglers.DogglersActivity"/>
-        <activity android:name="com.vynokurov.wordsapp.WordsAppMainActivity"/>
-        <activity android:name="com.vynokurov.wordsapp.DetailActivity"/>
+        <activity android:name="com.vynokurov.wordsapp.ui.activities.WordsAppMainActivity"/>
 
         <activity android:name="com.vynokurov.dogglers.VerticalListActivity">
             <meta-data

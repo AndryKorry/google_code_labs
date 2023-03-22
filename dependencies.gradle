@@ -16,7 +16,7 @@ ext {
             fragmentKtx    : "1.5.0",
             picasso        : "2.8",
             ads            : "20.5.0",
-            navs           : "2.3.2",
+            navs           : "2.5.2",
             room           : "2.4.3",
             reactiveKotlin : "2.4.0",
             reactiveAndroid: "2.1.1",

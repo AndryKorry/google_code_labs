@@ -11,7 +11,7 @@ import com.vynokurov.calc.home.adapter.AppsAdapter
 import com.vynokurov.calc.home.adapter.AppsClickListener
 import com.vynokurov.calc.home.data.AppsDataSource
 import com.vynokurov.dogglers.DogglersActivity
-import com.vynokurov.wordsapp.WordsAppMainActivity
+import com.vynokurov.wordsapp.ui.activities.WordsAppMainActivity
 
 class HomeActivity: AppCompatActivity(), AppsClickListener {
 
