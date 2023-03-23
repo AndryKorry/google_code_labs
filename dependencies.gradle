@@ -13,7 +13,7 @@ ext {
             appCompat      : "1.6.1",
             material       : '1.8.0',
             constrainLayout: '2.1.4',
-            fragmentKtx    : "1.5.0",
+            fragmentKtx    : "1.5.5",
             picasso        : "2.8",
             ads            : "20.5.0",
             navs           : "2.5.2",
