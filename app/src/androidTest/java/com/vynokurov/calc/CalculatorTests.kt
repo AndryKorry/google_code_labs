@@ -18,16 +18,16 @@ import org.junit.runner.RunWith
 class CalculatorTests {
 
     @get:Rule()
-    val activity = ActivityScenarioRule(com.vynokurov.tiptime.MainActivity::class.java)
+    val activity = ActivityScenarioRule(com.vynokurov.tiptime.TipTimeActivity::class.java)
 
     @Test
     fun calculate_20_percent_tip(){
-        onView(withId(R.id.cost_of_service_edit_text))
+        onView(withId(com.vynokurov.tiptime.R.id.cost_of_service_edit_text))
             .perform(typeText("50.00"))
             .perform(ViewActions.closeSoftKeyboard())
-        onView(withId(R.id.calculate_button))
+        onView(withId(com.vynokurov.tiptime.R.id.calculate_button))
             .perform(click())
-        onView(withId(R.id.tip_result))
+        onView(withId(com.vynokurov.tiptime.R.id.tip_result))
             .check(matches(withText(containsString("$10.00"))))
     }
 }
