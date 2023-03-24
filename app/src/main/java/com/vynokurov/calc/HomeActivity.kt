@@ -11,6 +11,7 @@ import com.vynokurov.calc.home.adapter.AppsAdapter
 import com.vynokurov.calc.home.adapter.AppsClickListener
 import com.vynokurov.calc.home.data.AppsDataSource
 import com.vynokurov.dogglers.DogglersActivity
+import com.vynokurov.unscramble.UnscrambleActivity
 import com.vynokurov.wordsapp.ui.activities.WordsAppMainActivity
 
 class HomeActivity: AppCompatActivity(), AppsClickListener {
@@ -26,11 +27,16 @@ class HomeActivity: AppCompatActivity(), AppsClickListener {
 
     override fun onAppClick(@StringRes name: Int) {
         when(name) {
-            R.string.app_tip_time ->
+            com.vynokurov.tiptime.R.string.app_tip_time_name ->
                 startActivity(Intent(this, com.vynokurov.tiptime.TipTimeActivity::class.java))
-            R.string.app_affirmations -> startActivity(Intent(this, AffirmationsActivity::class.java))
-            R.string.app_dogglers -> startActivity(Intent(this, DogglersActivity::class.java))
-            R.string.app_words_with_activity -> startActivity(Intent(this, WordsAppMainActivity::class.java))
+            com.vynokurov.affirmations.R.string.app_affirmations_name ->
+                startActivity(Intent(this, AffirmationsActivity::class.java))
+            com.vynokurov.dogglers.R.string.app_dogglers_name ->
+                startActivity(Intent(this, DogglersActivity::class.java))
+            com.vynokurov.wordsapp.R.string.app_words_name ->
+                startActivity(Intent(this, WordsAppMainActivity::class.java))
+            com.vynokurov.unscramble.R.string.app_unscramble_name ->
+                startActivity(Intent(this, UnscrambleActivity::class.java))
         }
     }
     private fun showToast (appName: Int) {

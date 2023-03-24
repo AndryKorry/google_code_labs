@@ -1,10 +1,3 @@
 <resources>
-    <string name="app_name">Google Labs</string>
-
-    <!--apps-->
-    <string name="app_tip_time">Tip Time</string>
-    <string name="app_affirmations">Affirmations</string>
-    <string name="app_dogglers">Dogglers</string>
-    <string name="app_words_with_activity">Words Activity</string>
-
+    <string name="app_name">GOOGLE Labs</string>
 </resources>
