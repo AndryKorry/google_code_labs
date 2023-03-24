@@ -10,6 +10,7 @@ import com.vynokurov.affirmations.AffirmationsActivity
 import com.vynokurov.calc.home.adapter.AppsAdapter
 import com.vynokurov.calc.home.adapter.AppsClickListener
 import com.vynokurov.calc.home.data.AppsDataSource
+import com.vynokurov.cupcakeapp.CupcakeActivity
 import com.vynokurov.dogglers.DogglersActivity
 import com.vynokurov.unscramble.UnscrambleActivity
 import com.vynokurov.wordsapp.ui.activities.WordsAppMainActivity
@@ -37,6 +38,8 @@ class HomeActivity: AppCompatActivity(), AppsClickListener {
                 startActivity(Intent(this, WordsAppMainActivity::class.java))
             com.vynokurov.unscramble.R.string.app_unscramble_name ->
                 startActivity(Intent(this, UnscrambleActivity::class.java))
+            com.vynokurov.cupcakeapp.R.string.app_cupcake_name ->
+                startActivity(Intent(this,CupcakeActivity::class.java))
         }
     }
     private fun showToast (appName: Int) {

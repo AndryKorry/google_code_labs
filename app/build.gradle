@@ -46,6 +46,7 @@ dependencies {
     implementation project(':dogglers')
     implementation project(':wordsapp')
     implementation project(':unscramble')
+    implementation project(':cupcakeapp')
 
     implementation androidx.coreKtx
     implementation androidx.appCompat
