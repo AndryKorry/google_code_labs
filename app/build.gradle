@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
 }
 apply from: '../dependencies.gradle'
 
@@ -34,7 +35,7 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures{
-        viewBinding = true
+        dataBinding = true
     }
 }
 
@@ -53,6 +54,9 @@ dependencies {
 
     implementation navigation.navFragment
     implementation navigation.navUi
+
+    //DataBinding
+    implementation androidx.dataBinding
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

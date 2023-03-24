@@ -1,13 +1,9 @@
 package com.vynokurov.calc.home.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.calc.R
-import com.vynokurov.calc.databinding.AppsItemBinding
 import com.vynokurov.calc.home.model.AppsModel
 
 class AppsAdapter (
@@ -17,7 +13,7 @@ class AppsAdapter (
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = AppsViewHolder (
-        AppsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false),
+        LayoutInflater.from(parent.context).inflate(R.layout.apps_item, parent, false),
         listener
     )
 

@@ -1,17 +1,19 @@
 package com.vynokurov.calc.home.adapter
 
+import android.view.View
+import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.recyclerview.widget.RecyclerView
-import com.vynokurov.calc.databinding.AppsItemBinding
+import com.vynokurov.calc.R
 
 class AppsViewHolder(
-    private val binding: AppsItemBinding,
+    private val view: View,
     private val listener: AppsClickListener
-) : RecyclerView.ViewHolder(binding.root) {
+) : RecyclerView.ViewHolder(view) {
 
-    fun bind(@StringRes appName: Int) = with(binding) {
-        itemTitle.text = binding.root.context.getText(appName)
-        root.setOnClickListener { listener.onAppClick(appName) }
+    fun bind(@StringRes appName: Int) {
+        view.findViewById<TextView>(R.id.item_title).text = view.context.getText(appName)
+        view.setOnClickListener { listener.onAppClick(appName) }
     }
 
 }
