@@ -25,6 +25,7 @@
         <activity android:name="com.vynokurov.dogglers.DogglersActivity"/>
         <activity android:name="com.vynokurov.wordsapp.ui.activities.WordsAppMainActivity"/>
         <activity android:name="com.vynokurov.unscramble.UnscrambleActivity"/>
+        <activity android:name="com.vynokurov.cupcakeapp.CupcakeActivity"/>
 
         <activity android:name="com.vynokurov.dogglers.VerticalListActivity">
             <meta-data

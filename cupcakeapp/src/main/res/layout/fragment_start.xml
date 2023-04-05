@@ -20,6 +20,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".StartFragment">
 
+    <data>
+        <variable
+            name="startFragment"
+            type="com.vynokurov.cupcakeapp.StartFragment" />
+    </data>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -53,6 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:onClick="@{() -> startFragment.orderCupcake(1)}"
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:text="@string/one_cupcake" />
@@ -62,6 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:onClick="@{() -> startFragment.orderCupcake(6)}"
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:text="@string/six_cupcakes" />
@@ -71,6 +79,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:onClick="@{() -> startFragment.orderCupcake(12)}"
                 android:layout_marginTop="@dimen/margin_between_elements"
                 android:minWidth="@dimen/order_cupcake_button_width"
                 android:text="@string/twelve_cupcakes" />
