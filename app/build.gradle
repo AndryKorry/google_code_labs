@@ -41,12 +41,12 @@ android {
 
 dependencies {
 
-    implementation project(':affirmations')
-    implementation project(':tiptime')
-    implementation project(':dogglers')
-    implementation project(':wordsapp')
-    implementation project(':unscramble')
-    implementation project(':cupcakeapp')
+    implementation project(':app_affirmations')
+    implementation project(':app_tiptime')
+    implementation project(':app_dogglers')
+    implementation project(':app_words')
+    implementation project(':app_unscramble')
+    implementation project(':app_cupcake')
 
     implementation androidx.coreKtx
     implementation androidx.appCompat

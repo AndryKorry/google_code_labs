@@ -6,7 +6,7 @@ import junit.framework.TestCase.assertEquals
 import org.junit.Rule
 import org.junit.Test
 
-class ViewModelTests {
+class AppCupcakeViewModelTests {
 
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()

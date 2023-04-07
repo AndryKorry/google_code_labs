@@ -14,9 +14,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Calc"
 include ':app'
-include ':affirmations'
-include ':tiptime'
-include ':dogglers'
-include ':wordsapp'
-include ':unscramble'
-include ':cupcakeapp'
+include ':app_affirmations'
+include ':app_tiptime'
+include ':app_dogglers'
+include ':app_words'
+include ':app_unscramble'
+include ':app_cupcake'
+include ':app_sports'
