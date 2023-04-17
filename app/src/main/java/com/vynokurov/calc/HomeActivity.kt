@@ -12,6 +12,7 @@ import com.vynokurov.calc.home.adapter.AppsClickListener
 import com.vynokurov.calc.home.data.AppsDataSource
 import com.vynokurov.cupcakeapp.CupcakeActivity
 import com.vynokurov.dogglers.DogglersActivity
+import com.vynokurov.sportsapp.SportsActivity
 import com.vynokurov.unscramble.UnscrambleActivity
 import com.vynokurov.wordsapp.ui.activities.WordsAppMainActivity
 
@@ -40,10 +41,8 @@ class HomeActivity: AppCompatActivity(), AppsClickListener {
                 startActivity(Intent(this, UnscrambleActivity::class.java))
             com.vynokurov.cupcakeapp.R.string.app_cupcake_name ->
                 startActivity(Intent(this,CupcakeActivity::class.java))
+            com.vynokurov.app_sports.R.string.app_sports_name ->
+                startActivity(Intent(this,SportsActivity::class.java))
         }
     }
-    private fun showToast (appName: Int) {
-        Toast.makeText(this, getString(appName), Toast.LENGTH_SHORT).show()
-    }
-
 }

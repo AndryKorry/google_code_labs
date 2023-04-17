@@ -1,4 +1,4 @@
-package com.vynokurov.sportsapp
+package com.vynokurov.app_sports
 
 import org.junit.Test
 
