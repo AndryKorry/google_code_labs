@@ -11,6 +11,7 @@ class AppsDataSource {
         AppsModel(com.vynokurov.affirmations.R.string.app_affirmations_name),
         AppsModel(com.vynokurov.unscramble.R.string.app_unscramble_name),
         AppsModel(com.vynokurov.cupcakeapp.R.string.app_cupcake_name),
-        AppsModel(com.vynokurov.app_sports.R.string.app_sports_name)
+        AppsModel(com.vynokurov.app_sports.R.string.app_sports_name),
+        AppsModel(com.vynokurov.app_mars.R.string.app_mars_name)
     )
 }

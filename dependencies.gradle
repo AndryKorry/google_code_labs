@@ -30,6 +30,8 @@ ext {
             junitX             : "1.1.5",
             espresso           : "3.5.1",
             dataBindingVersion : "7.4.2",
+            retrofitVersion    : "2.9.0",
+            moshiVersion       : "1.13.0",
 
             gson           : "2.8.6",
             analytics      : "17.5.0",
@@ -61,6 +63,12 @@ ext {
     navigation = [
             navFragment         : "androidx.navigation:navigation-fragment-ktx:${versions.navs}",
             navUi               : "androidx.navigation:navigation-ui-ktx:${versions.navs}"
+    ]
+
+    rest = [
+            retrofit                   : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+            retrofitConverter          : "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}",
+            moshi                      : "com.squareup.moshi:moshi-kotlin:${versions.moshiVersion}"
     ]
 
     room = [

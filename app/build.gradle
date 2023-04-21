@@ -48,6 +48,7 @@ dependencies {
     implementation project(':app_unscramble')
     implementation project(':app_cupcake')
     implementation project(':app_sports')
+    implementation project(':app_mars' )
 
     implementation androidx.coreKtx
     implementation androidx.appCompat
