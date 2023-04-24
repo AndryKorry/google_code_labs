@@ -32,6 +32,7 @@ ext {
             dataBindingVersion : "7.4.2",
             retrofitVersion    : "2.9.0",
             moshiVersion       : "1.13.0",
+            coilVersion         : "1.1.1",
 
             gson           : "2.8.6",
             analytics      : "17.5.0",
@@ -68,13 +69,15 @@ ext {
     rest = [
             retrofit                   : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
             retrofitConverter          : "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}",
-            moshi                      : "com.squareup.moshi:moshi-kotlin:${versions.moshiVersion}"
+            moshi                      : "com.squareup.moshi:moshi-kotlin:${versions.moshiVersion}",
+            coil                       : "io.coil-kt:coil:${versions.coilVersion}"
     ]
 
     room = [
             runtime             : "androidx.room:room-runtime:${versions.room}",
             compiler            : "androidx.room:room-compiler:${versions.room}",
             roomKtx             : "androidx.room:room-ktx:${versions.room}"
+
     ]
 
     reactivex = [

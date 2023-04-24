@@ -5,6 +5,7 @@ plugins {
 }
 
 apply from: '../dependencies.gradle'
+
 android {
     namespace 'com.vynokurov.app_mars'
     compileSdk 33
@@ -51,6 +52,7 @@ dependencies {
     implementation rest.retrofit
     implementation rest.retrofitConverter
     implementation rest.moshi
+    implementation rest.coil
 
     //Tests
     testImplementation tests.junitTest
