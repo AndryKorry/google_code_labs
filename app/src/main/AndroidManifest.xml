@@ -30,6 +30,7 @@
         <activity android:name="com.vynokurov.cupcakeapp.CupcakeActivity"/>
         <activity android:name="com.vynokurov.sportsapp.SportsActivity"/>
         <activity android:name="com.vynokurov.app_mars.AppMarsActivity"/>
+        <activity android:name="com.vynokurov.app_bus_schedule.AppBusSchedulerActivity"/>
 
         <activity android:name="com.vynokurov.dogglers.VerticalListActivity">
             <meta-data

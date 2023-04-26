@@ -7,6 +7,7 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.affirmations.AffirmationsActivity
+import com.vynokurov.app_bus_schedule.AppBusSchedulerActivity
 import com.vynokurov.app_mars.AppMarsActivity
 import com.vynokurov.calc.home.adapter.AppsAdapter
 import com.vynokurov.calc.home.adapter.AppsClickListener
@@ -46,7 +47,8 @@ class HomeActivity: AppCompatActivity(), AppsClickListener {
                 startActivity(Intent(this,SportsActivity::class.java))
             com.vynokurov.app_mars.R.string.app_mars_name ->
                 startActivity(Intent(this,AppMarsActivity::class.java))
-
+            com.vynokurov.app_bus_schedule.R.string.app_bus_schedule_name ->
+                startActivity(Intent(this, AppBusSchedulerActivity::class.java))
         }
     }
 }

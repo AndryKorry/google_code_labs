@@ -28,7 +28,7 @@ class NavigationTests {
         R.style.Theme_Words
         )
         letterListScenario.onFragment{
-            fragment -> navController.setGraph(R.navigation.nav_graph)
+            fragment -> navController.setGraph(R.navigation.nav_graph_app_bus)
             Navigation.setViewNavController(fragment.requireView(), navController)
         }
         onView(withId(R.id.recycler_view))
