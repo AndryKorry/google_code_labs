@@ -7,14 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.vynokurov.app_inventory.databinding.FragmentAddItemBinding
+import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
 
 /**
  * Fragment to add or update an item in the Inventory database.
  */
 class AddItemFragment : Fragment() {
 
+    private val viewModel: InventoryViewModel by activityViewModels {
+        InventoryViewModelFactory(InventoryItemDataBaseMaster.getInventoryDb(requireContext()).inventoryItemDao())
+    }
+    lateinit var item: InventoryItemEntity
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
 
     // Binding object instance corresponding to the fragment_add_item.xml layout
@@ -30,6 +37,33 @@ class AddItemFragment : Fragment() {
     ): View? {
         _binding = FragmentAddItemBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.saveAction.setOnClickListener {
+            addNewItem()
+        }
+    }
+
+    private fun isEntryValid(): Boolean {
+        return viewModel.isEntryValid(
+            binding.itemName.text.toString(),
+            binding.itemPrice.text.toString(),
+            binding.itemCount.text.toString()
+        )
+    }
+
+    private fun addNewItem() {
+        if (isEntryValid()) {
+            viewModel.addNewItem(
+                binding.itemName.text.toString(),
+                binding.itemPrice.text.toString(),
+                binding.itemCount.text.toString(),
+            )
+        }
+        val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
+        findNavController().navigate(action)
     }
 
     /**

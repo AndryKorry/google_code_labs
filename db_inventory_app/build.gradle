@@ -1,14 +1,12 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
 }
 
 apply from: '../dependencies.gradle'
-
 android {
-    namespace 'com.vynokurov.app_inventory'
+    namespace 'com.vynokurov.db_inventory_app'
     compileSdk 33
 
     defaultConfig {
@@ -32,14 +30,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
 }
-
 dependencies {
 
-    implementation project(':db_inventory_app')
     //Core
     implementation androidx.coreKtx
     implementation androidx.appCompat
@@ -51,16 +44,10 @@ dependencies {
     kapt room.compiler
     implementation room.roomKtx
 
-    //ViewModel
-    implementation androidx.viewmodelKtx
-    implementation androidx.livedataKtx
-
-    //Navigation
-    implementation navigation.navFragment
-    implementation navigation.navUi
-
     //Tests
     testImplementation tests.junitTest
     androidTestImplementation tests.xTest
     androidTestImplementation tests.espressoTest
+
+    androidTestImplementation 'androidx.annotation:annotation:1.5.0'
 }
