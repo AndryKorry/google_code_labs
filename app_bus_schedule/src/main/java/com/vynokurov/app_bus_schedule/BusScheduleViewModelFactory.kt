@@ -1,8 +1,8 @@
-package com.vynokurov.app_bus_schedule.database.schedule
+package com.vynokurov.app_bus_schedule
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.vynokurov.app_bus_schedule.database.viewModels.BusScheduleViewModel
+import com.vynokurov.db_bus_schedule.schedule.dao.ScheduleDao
 
 class BusScheduleViewModelFactory(private val scheduleDao: ScheduleDao) : ViewModelProvider.Factory {
 

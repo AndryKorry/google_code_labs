@@ -1,15 +1,12 @@
-
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
 }
 
 apply from: '../dependencies.gradle'
-
 android {
-    namespace 'com.vynokurov.app_bus_schedule'
+    namespace 'com.vynokurov.db_bus_schedule'
     compileSdk 33
 
     defaultConfig {
@@ -33,35 +30,20 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
 
-    implementation project(':db_bus_schedule')
     //Core
     implementation androidx.coreKtx
     implementation androidx.appCompat
     implementation androidx.constrainLayout
     implementation google.material
 
-    //ViewModel
-    implementation androidx.viewmodelKtx
-
-    //Coroutines
-    implementation kotlin.coroutinesAndroid
-
     //DB
     implementation room.runtime
     kapt room.compiler
     implementation room.roomKtx
-
-    //Navigation
-    implementation navigation.navFragment
-    implementation navigation.navUi
 
     //Tests
     testImplementation tests.junitTest

@@ -13,6 +13,7 @@ class AppsDataSource {
         AppsModel(com.vynokurov.cupcakeapp.R.string.app_cupcake_name),
         AppsModel(com.vynokurov.app_sports.R.string.app_sports_name),
         AppsModel(com.vynokurov.app_mars.R.string.app_mars_name),
-        AppsModel(com.vynokurov.app_bus_schedule.R.string.app_bus_schedule_name)
+        AppsModel(com.vynokurov.app_bus_schedule.R.string.app_bus_schedule_name),
+        AppsModel(com.vynokurov.app_inventory.R.string.app_inventory_name)
     )
 }

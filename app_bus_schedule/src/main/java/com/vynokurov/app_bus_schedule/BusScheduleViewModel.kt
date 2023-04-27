@@ -1,8 +1,8 @@
-package com.vynokurov.app_bus_schedule.database.viewModels
+package com.vynokurov.app_bus_schedule
 
 import androidx.lifecycle.ViewModel
-import com.vynokurov.app_bus_schedule.database.schedule.ScheduleDao
-import com.vynokurov.app_bus_schedule.database.schedule.ScheduleEntity
+import com.vynokurov.db_bus_schedule.schedule.dao.ScheduleDao
+import com.vynokurov.db_bus_schedule.schedule.entity.ScheduleEntity
 import kotlinx.coroutines.flow.Flow
 
 class BusScheduleViewModel(private val scheduleDao: ScheduleDao) : ViewModel() {

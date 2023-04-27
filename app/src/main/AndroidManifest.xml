@@ -5,7 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.vynokurov.app_bus_schedule.BusScheduleApplication"
+        android:name=".home.CodeLabApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -32,6 +32,7 @@
         <activity android:name="com.vynokurov.sportsapp.SportsActivity"/>
         <activity android:name="com.vynokurov.app_mars.AppMarsActivity"/>
         <activity android:name="com.vynokurov.app_bus_schedule.AppBusSchedulerActivity"/>
+        <activity android:name="com.vynokurov.app_inventory.AppInventoryActivity"/>
 
         <activity android:name="com.vynokurov.dogglers.VerticalListActivity">
             <meta-data

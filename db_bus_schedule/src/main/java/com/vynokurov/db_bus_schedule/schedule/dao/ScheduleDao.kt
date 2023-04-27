@@ -1,7 +1,8 @@
-package com.vynokurov.app_bus_schedule.database.schedule
+package com.vynokurov.db_bus_schedule.schedule.dao
 
 import androidx.room.Dao
 import androidx.room.Query
+import com.vynokurov.db_bus_schedule.schedule.entity.ScheduleEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

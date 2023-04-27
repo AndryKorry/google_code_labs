@@ -1,4 +1,4 @@
-package com.vynokurov.app_bus_schedule.database.schedule
+package com.vynokurov.db_bus_schedule.schedule.entity
 
 import androidx.annotation.NonNull
 import androidx.room.ColumnInfo

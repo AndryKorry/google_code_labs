@@ -1,28 +1,28 @@
-package com.vynokurov.app_bus_schedule.database
+package com.vynokurov.db_bus_schedule
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.vynokurov.app_bus_schedule.database.schedule.ScheduleDao
-import com.vynokurov.app_bus_schedule.database.schedule.ScheduleEntity
+import com.vynokurov.db_bus_schedule.schedule.dao.ScheduleDao
+import com.vynokurov.db_bus_schedule.schedule.entity.ScheduleEntity
 
 
 @Database(entities = [ScheduleEntity::class], version = 1)
-abstract class AppDatabase : RoomDatabase() {
+abstract class BusScheduleDatabase : RoomDatabase() {
 
     abstract fun scheduleDao(): ScheduleDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE: AppDatabase? = null
+        private var INSTANCE: BusScheduleDatabase? = null
 
-        fun getDatabase(context: Context): AppDatabase {
+        fun getDatabase(context: Context): BusScheduleDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context,
-                    AppDatabase::class.java,
+                    BusScheduleDatabase::class.java,
                     "app_database"
                 )
                     .createFromAsset("database/bus_schedule.db")

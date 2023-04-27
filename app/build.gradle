@@ -34,7 +34,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{
+    buildFeatures {
         dataBinding = true
     }
 }
@@ -48,8 +48,10 @@ dependencies {
     implementation project(':app_unscramble')
     implementation project(':app_cupcake')
     implementation project(':app_sports')
-    implementation project(':app_mars' )
-    implementation project(':app_bus_schedule' )
+    implementation project(':app_mars')
+    implementation project(':app_bus_schedule')
+    implementation project(':app_inventory')
+    implementation project(':db_bus_schedule')
 
     implementation androidx.coreKtx
     implementation androidx.appCompat
