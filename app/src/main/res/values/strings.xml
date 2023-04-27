@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">GOOGLE Labs</string>
+    <string name="title_db_inventory_app">db_inventory_app</string>
 </resources>

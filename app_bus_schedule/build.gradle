@@ -41,6 +41,7 @@ android {
 
 dependencies {
 
+    implementation project(':db_bus_schedule')
     //Core
     implementation androidx.coreKtx
     implementation androidx.appCompat
