@@ -21,9 +21,11 @@
             <option value="$PROJECT_DIR$/app_sports" />
             <option value="$PROJECT_DIR$/app_tiptime" />
             <option value="$PROJECT_DIR$/app_unscramble" />
+            <option value="$PROJECT_DIR$/app_video_viewer" />
             <option value="$PROJECT_DIR$/app_words" />
             <option value="$PROJECT_DIR$/db_bus_schedule" />
             <option value="$PROJECT_DIR$/db_inventory_app" />
+            <option value="$PROJECT_DIR$/db_video_app" />
           </set>
         </option>
       </GradleProjectSettings>

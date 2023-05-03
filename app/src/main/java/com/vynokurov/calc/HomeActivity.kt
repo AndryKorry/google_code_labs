@@ -10,6 +10,7 @@ import com.vynokurov.affirmations.AffirmationsActivity
 import com.vynokurov.app_bus_schedule.AppBusSchedulerActivity
 import com.vynokurov.app_inventory.AppInventoryActivity
 import com.vynokurov.app_mars.AppMarsActivity
+import com.vynokurov.app_video_viewer.ui.DevByteActivity
 import com.vynokurov.calc.home.adapter.AppsAdapter
 import com.vynokurov.calc.home.adapter.AppsClickListener
 import com.vynokurov.calc.home.data.AppsDataSource
@@ -24,7 +25,7 @@ class HomeActivity: AppCompatActivity(), AppsClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        val dataSet = AppsDataSource().loadDataSource()
+        val dataSet = AppsDataSource().loadDataSource().sortedByDescending { it.stringResourceId }
         val recyclerView = findViewById<RecyclerView>(R.id.apps_recycler)
         recyclerView.adapter = AppsAdapter(dataSet, this)
         recyclerView.setHasFixedSize(true)
@@ -52,6 +53,8 @@ class HomeActivity: AppCompatActivity(), AppsClickListener {
                 startActivity(Intent(this, AppBusSchedulerActivity::class.java))
             com.vynokurov.app_inventory.R.string.app_inventory_name ->
                 startActivity(Intent(this, AppInventoryActivity::class.java))
+            com.vynokurov.app_video_viewer.R.string.app_video_viewer ->
+                startActivity(Intent(this, DevByteActivity::class.java))
         }
     }
 }
