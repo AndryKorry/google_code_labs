@@ -51,7 +51,11 @@ dependencies {
     implementation project(':app_mars')
     implementation project(':app_bus_schedule')
     implementation project(':app_inventory')
+    implementation project(':app_video_viewer')
+
+
     implementation project(':db_bus_schedule')
+    implementation project(':db_video_app')
 
     implementation androidx.coreKtx
     implementation androidx.appCompat

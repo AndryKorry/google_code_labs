@@ -32,7 +32,8 @@ ext {
             dataBindingVersion : "7.4.2",
             retrofitVersion    : "2.9.0",
             moshiVersion       : "1.13.0",
-            coilVersion         : "1.1.1",
+            coilVersion        : "1.1.1",
+            glideVersion       : "4.15.1",
 
             gson           : "2.8.6",
             analytics      : "17.5.0",
@@ -67,10 +68,11 @@ ext {
     ]
 
     rest = [
-            retrofit                   : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
-            retrofitConverter          : "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}",
-            moshi                      : "com.squareup.moshi:moshi-kotlin:${versions.moshiVersion}",
-            coil                       : "io.coil-kt:coil:${versions.coilVersion}"
+            retrofit                        : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+            retrofitMoshiConverter          : "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}",
+            retrofitGsonConverter           : "com.squareup.retrofit2:converter-gson::${versions.retrofitVersion}",
+            moshi                           : "com.squareup.moshi:moshi-kotlin:${versions.moshiVersion}",
+            coil                            : "io.coil-kt:coil:${versions.coilVersion}"
     ]
 
     room = [
@@ -109,7 +111,8 @@ ext {
             threetenabp      : "com.jakewharton.threetenabp:threetenabp:${versions.threetenabp}",
             leakcanaryAndroid: "com.squareup.leakcanary:leakcanary-android:${versions.leakCanary}",
             picasso          : "com.squareup.picasso:picasso:${versions.picasso}",
-            timber           : "com.jakewharton.timber:timber:${versions.timber}"
+            timber           : "com.jakewharton.timber:timber:${versions.timber}",
+            glide            : "com.github.bumptech.glide:glide:${versions.glideVersion}"
     ]
 
 }
