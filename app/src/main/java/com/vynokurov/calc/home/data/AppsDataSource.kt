@@ -14,6 +14,7 @@ class AppsDataSource {
         AppsModel(com.vynokurov.app_sports.R.string.app_sports_name),
         AppsModel(com.vynokurov.app_mars.R.string.app_mars_name),
         AppsModel(com.vynokurov.app_bus_schedule.R.string.app_bus_schedule_name),
-        AppsModel(com.vynokurov.app_inventory.R.string.app_inventory_name)
+        AppsModel(com.vynokurov.app_inventory.R.string.app_inventory_name),
+        AppsModel(com.vynokurov.app_video_viewer.R.string.app_video_viewer)
     )
 }

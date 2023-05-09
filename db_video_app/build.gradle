@@ -7,7 +7,7 @@ plugins {
 apply from: '../dependencies.gradle'
 
 android {
-    namespace 'com.vynokurov.db_inventory_app'
+    namespace 'com.vynokurov.db_video_app'
     compileSdk 33
 
     defaultConfig {
@@ -32,13 +32,12 @@ android {
         jvmTarget = '1.8'
     }
 }
+
 dependencies {
 
     //Core
     implementation androidx.coreKtx
     implementation androidx.appCompat
-    implementation androidx.constrainLayout
-    implementation google.material
 
     //DB
     implementation room.runtime
@@ -49,6 +48,4 @@ dependencies {
     testImplementation tests.junitTest
     androidTestImplementation tests.xTest
     androidTestImplementation tests.espressoTest
-
-    androidTestImplementation 'androidx.annotation:annotation:1.5.0'
 }

@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-kapt'
+}
+
+apply from: '../dependencies.gradle'
+
+android {
+    namespace 'com.vynokurov.app_video_viewer'
+    compileSdk 33
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_7
+    targetCompatibility = JavaVersion.VERSION_1_7
+}
+
+dependencies {
+
+     implementation project(':db_video_app')
+    
+    //Core
+    implementation androidx.coreKtx
+    implementation androidx.appCompat
+    implementation androidx.constrainLayout
+    implementation google.material
+
+    //DB
+    implementation room.runtime
+    kapt room.compiler
+    implementation room.roomKtx
+
+    //ViewModel
+    implementation androidx.viewmodelKtx
+    implementation androidx.livedataKtx
+
+    //Navigation
+    implementation navigation.navFragment
+    implementation navigation.navUi
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    //Coroutines
+    implementation kotlin.coroutinesAndroid
+    implementation kotlin.coroutines
+
+    // REST
+    implementation rest.retrofit
+    implementation rest.retrofitMoshiConverter
+    implementation rest.moshi
+    implementation rest.coil
+
+
+    // moshi for parsing the JSON format
+    def moshi_version = "1.13.0"
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
+
+    //Glide
+    implementation others.glide
+
+    //Tests
+    testImplementation tests.junitTest
+    androidTestImplementation tests.xTest
+    androidTestImplementation tests.espressoTest
+}

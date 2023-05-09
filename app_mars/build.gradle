@@ -50,7 +50,7 @@ dependencies {
 
     // REST
     implementation rest.retrofit
-    implementation rest.retrofitConverter
+    implementation rest.retrofitMoshiConverter
     implementation rest.moshi
     implementation rest.coil
 
