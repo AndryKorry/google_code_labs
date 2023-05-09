@@ -44,6 +44,8 @@ dependencies {
     implementation navigation.navFragment
     implementation navigation.navUi
 
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
     //Coroutines
     implementation kotlin.coroutinesAndroid
     implementation kotlin.coroutines
@@ -53,6 +55,13 @@ dependencies {
     implementation rest.retrofitMoshiConverter
     implementation rest.moshi
     implementation rest.coil
+
+
+    // moshi for parsing the JSON format
+    def moshi_version = "1.13.0"
+    implementation "com.squareup.moshi:moshi:$moshi_version"
+    implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
+    kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
 
     //Glide
     implementation others.glide

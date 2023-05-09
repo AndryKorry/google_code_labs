@@ -5,13 +5,14 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.vynokurov.db_video_app.entity.VideoEntities
+import com.vynokurov.db_video_app.entity.DatabaseVideo
 
 @Dao
 interface VideoDao {
-    @Query("select * from video_table")
-    fun getVideos(): LiveData<List<VideoEntities>>
+
+    @Query("Select * From databasevideo")
+    fun getVideos(): LiveData<List<DatabaseVideo>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insertAll( videos: List<VideoEntities>)
+    fun insertAll( videos: List<DatabaseVideo>)
 }

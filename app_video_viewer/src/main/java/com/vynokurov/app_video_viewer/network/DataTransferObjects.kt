@@ -1,8 +1,8 @@
 package com.vynokurov.app_video_viewer.network
 
-import com.vynokurov.app_video_viewer.domain.DevByteVideo
 import com.squareup.moshi.JsonClass
-import com.vynokurov.db_video_app.entity.VideoEntities
+import com.vynokurov.app_video_viewer.domain.DevByteVideo
+import com.vynokurov.db_video_app.entity.DatabaseVideo
 
 /**
  * DataTransferObjects go in this file. These are responsible for parsing responses from the server
@@ -54,9 +54,9 @@ fun NetworkVideoContainer.asDomainModel(): List<DevByteVideo> {
 /**
  * Convert Network results to database objects
  */
-fun NetworkVideoContainer.asDatabaseModel(): List<VideoEntities> {
+fun NetworkVideoContainer.asDatabaseModel(): List<DatabaseVideo> {
     return videos.map {
-        VideoEntities(
+        DatabaseVideo(
                 title = it.title,
                 description = it.description,
                 url = it.url,
@@ -65,7 +65,10 @@ fun NetworkVideoContainer.asDatabaseModel(): List<VideoEntities> {
     }
 }
 
-fun List<VideoEntities>.asDomainModel(): List<DevByteVideo> {
+/**
+ * Map DatabaseVideos to domain entities
+ */
+fun List<DatabaseVideo>.asDomainModel(): List<DevByteVideo> {
     return map {
         DevByteVideo(
             url = it.url,

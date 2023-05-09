@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.vynokurov.db_video_app.dao.VideoDao
-import com.vynokurov.db_video_app.entity.VideoEntities
+import com.vynokurov.db_video_app.entity.DatabaseVideo
 
-@Database(entities = [VideoEntities::class], version = 1, exportSchema = false)
+@Database(entities = [DatabaseVideo::class], version = 2, exportSchema = false)
 abstract class VideosAppDatabase : RoomDatabase() {
 
     abstract val videoDao: VideoDao

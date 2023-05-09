@@ -16,11 +16,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.app_video_viewer.DevByteViewModelFactory
 import com.vynokurov.app_video_viewer.R
-import com.vynokurov.app_video_viewer.VideoAppDataBaseMaster
 import com.vynokurov.app_video_viewer.databinding.DevbyteItemBinding
 import com.vynokurov.app_video_viewer.databinding.FragmentDevByteBinding
 import com.vynokurov.app_video_viewer.domain.DevByteVideo
 import com.vynokurov.app_video_viewer.viewmodels.DevByteViewModel
+import com.vynokurov.db_video_app.VideoAppDataBaseMaster
 
 /**
  * Show a list of DevBytes on screen.

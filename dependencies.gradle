@@ -1,4 +1,10 @@
 ext {
+    configVersions = [
+            compileSdk : 33,
+            minSdk     : 24,
+            targetSdk  : 33,
+            versionCode: 1
+    ]
     versions = [
             kt                           : "1.7.20",
             ktCoroutines                 : "1.1.1",
@@ -28,17 +34,12 @@ ext {
             moshiVersion                 : "1.13.0",
             coilVersion                  : "1.1.1",
             dataStorePrefVersion         : "1.0.0",
+            glideVersion                 : "4.8.0",
 
             gson           : "2.8.6",
             analytics      : "17.5.0",
             crashlytics    : "17.2.1",
             timber         : "4.7.1",
-    ]
-    configVersions = [
-            compileSdk : 33,
-            minSdk     : 24,
-            targetSdk  : 33,
-            versionCode: 1
     ]
 
     androidx = [
@@ -70,7 +71,7 @@ ext {
 
     rest = [
             retrofit                   : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
-            retrofitConverter          : "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}",
+            retrofitMoshiConverter     : "com.squareup.retrofit2:converter-moshi:${versions.retrofitVersion}",
             moshi                      : "com.squareup.moshi:moshi-kotlin:${versions.moshiVersion}",
             coil                       : "io.coil-kt:coil:${versions.coilVersion}"
     ]
