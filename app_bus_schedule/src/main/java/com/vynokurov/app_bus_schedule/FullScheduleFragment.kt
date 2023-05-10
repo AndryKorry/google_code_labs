@@ -11,6 +11,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.app_bus_schedule.databinding.FullScheduleFragmentBinding
+import com.vynokurov.db_main.AppDataBaseMaster
 import kotlinx.coroutines.launch
 
 class FullScheduleFragment : Fragment() {
@@ -18,7 +19,7 @@ class FullScheduleFragment : Fragment() {
     private var _binding: FullScheduleFragmentBinding? = null
     private val binding get() = _binding!!
     private val viewModel: BusScheduleViewModel by activityViewModels {
-        BusScheduleViewModelFactory(BusScheduleDataBaseMaster.getBusScheduleDb(requireContext()).scheduleDao())
+        BusScheduleViewModelFactory(AppDataBaseMaster.getMainDB(requireContext()).scheduleDao)
     }
 
     private lateinit var recyclerView: RecyclerView

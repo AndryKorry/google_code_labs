@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.vynokurov.db_bus_schedule.schedule.entity.ScheduleEntity
+import com.vynokurov.db_main.entity.ScheduleEntity
 import com.vynokurov.app_bus_schedule.databinding.BusStopItemBinding
 import java.text.SimpleDateFormat
 import java.util.*

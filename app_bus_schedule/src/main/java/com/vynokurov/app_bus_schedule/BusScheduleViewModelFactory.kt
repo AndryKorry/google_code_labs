@@ -2,7 +2,7 @@ package com.vynokurov.app_bus_schedule
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.vynokurov.db_bus_schedule.schedule.dao.ScheduleDao
+import com.vynokurov.db_main.dao.ScheduleDao
 
 class BusScheduleViewModelFactory(private val scheduleDao: ScheduleDao) : ViewModelProvider.Factory {
 

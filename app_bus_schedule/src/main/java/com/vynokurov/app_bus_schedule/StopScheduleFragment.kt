@@ -10,6 +10,7 @@ import androidx.lifecycle.coroutineScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.app_bus_schedule.databinding.StopScheduleFragmentBinding
+import com.vynokurov.db_main.AppDataBaseMaster
 import kotlinx.coroutines.launch
 
 class StopScheduleFragment : Fragment() {
@@ -26,7 +27,7 @@ class StopScheduleFragment : Fragment() {
 
     private lateinit var stopName: String
     private val viewModel: BusScheduleViewModel by activityViewModels {
-        BusScheduleViewModelFactory(BusScheduleDataBaseMaster.getBusScheduleDb(requireContext()).scheduleDao())
+        BusScheduleViewModelFactory(AppDataBaseMaster.getMainDB(requireContext()).scheduleDao)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

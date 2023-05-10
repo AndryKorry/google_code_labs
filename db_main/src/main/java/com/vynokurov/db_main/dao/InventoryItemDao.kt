@@ -21,9 +21,9 @@ interface InventoryItemDao {
     @Delete
     suspend fun deleteItem(item: InventoryItemEntity)
 
-    @Query("SELECT * FROM inventoryItem WHERE id = :id")
+    @Query("SELECT * FROM inventory_item WHERE id = :id")
     fun getItemById(id: Int): Flow<InventoryItemEntity>
 
-    @Query(" SELECT * FROM inventoryItem ORDER BY name ASC")
+    @Query(" SELECT * FROM inventory_item ORDER BY name ASC")
     fun getAllItems(): Flow<List<InventoryItemEntity>>
 }
