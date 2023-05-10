@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.app_mars.databinding.GridViewItemBinding
-import com.vynokurov.app_mars.network.MarsPhoto
+import com.vynokurov.app_mars.domain.MarsPhotoDomainModel
 
-class PhotoGridAdapter : ListAdapter<MarsPhoto, PhotoGridAdapter.MarsPhotoViewHolder>(DiffCallback) {
+class PhotoGridAdapter : ListAdapter<MarsPhotoDomainModel, PhotoGridAdapter.MarsPhotoViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
         MarsPhotoViewHolder(GridViewItemBinding.inflate(LayoutInflater.from(parent.context)))
@@ -21,17 +21,19 @@ class PhotoGridAdapter : ListAdapter<MarsPhoto, PhotoGridAdapter.MarsPhotoViewHo
 
     class MarsPhotoViewHolder(private var binding: GridViewItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(MarsPhoto: MarsPhoto) {
-            binding.photo = MarsPhoto
+        fun bind(marsPhoto: MarsPhotoDomainModel) {
+            binding.photo = marsPhoto
             binding.executePendingBindings()
         }
     }
 
-    companion object DiffCallback : DiffUtil.ItemCallback<MarsPhoto>() {
+    companion object DiffCallback : DiffUtil.ItemCallback<MarsPhotoDomainModel>() {
 
-        override fun areItemsTheSame(oldItem: MarsPhoto, newItem: MarsPhoto) = oldItem.id == newItem.id
+        override fun areItemsTheSame(oldItem: MarsPhotoDomainModel, newItem: MarsPhotoDomainModel)
+        = oldItem.id == newItem.id
 
-        override fun areContentsTheSame(oldItem: MarsPhoto, newItem: MarsPhoto) = oldItem.imageSrcUrl == newItem.imageSrcUrl
+        override fun areContentsTheSame(oldItem: MarsPhotoDomainModel, newItem: MarsPhotoDomainModel)
+        = oldItem.imageSource == newItem.imageSource
     }
 
 }

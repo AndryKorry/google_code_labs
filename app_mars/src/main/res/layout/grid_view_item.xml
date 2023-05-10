@@ -8,7 +8,7 @@
             type="com.vynokurov.app_mars.overview.OverviewViewModel" />
         <variable
             name="photo"
-            type="com.vynokurov.app_mars.network.MarsPhoto" />
+            type="com.vynokurov.app_mars.domain.MarsPhotoDomainModel" />
     </data>
     <ImageView
         android:id="@+id/mars_image"
@@ -17,6 +17,6 @@
         android:scaleType="fitXY"
         android:adjustViewBounds="true"
         android:padding="2dp"
-        app:imageUrl="@{photo.imageSrcUrl}"
+        app:imageUrl="@{photo.imageSource}"
         tools:src="@tools:sample/backgrounds/scenic"/>
 </layout>

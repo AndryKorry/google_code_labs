@@ -25,6 +25,7 @@
             <option value="$PROJECT_DIR$/app_words" />
             <option value="$PROJECT_DIR$/db_bus_schedule" />
             <option value="$PROJECT_DIR$/db_inventory_app" />
+            <option value="$PROJECT_DIR$/db_main" />
             <option value="$PROJECT_DIR$/db_video_app" />
           </set>
         </option>
