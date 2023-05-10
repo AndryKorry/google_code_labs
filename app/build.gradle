@@ -55,7 +55,6 @@ dependencies {
 
 
     implementation project(':db_bus_schedule')
-    implementation project(':db_video_app')
     implementation project(':db_main')
 
     implementation androidx.coreKtx

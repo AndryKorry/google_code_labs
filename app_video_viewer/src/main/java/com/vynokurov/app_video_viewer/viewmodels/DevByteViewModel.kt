@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vynokurov.app_video_viewer.repository.VideosRepository
-import com.vynokurov.db_video_app.dao.VideoDao
+import com.vynokurov.db_main.dao.VideoDao
 import kotlinx.coroutines.*
 import java.io.IOException
 
@@ -19,7 +19,7 @@ import java.io.IOException
  * reference to applications across rotation since Application is never recreated during actiivty
  * or fragment lifecycle events.
  */
-class DevByteViewModel(videoDao: VideoDao) : ViewModel() {
+class DevByteViewModel(videoDao: com.vynokurov.db_main.dao.VideoDao) : ViewModel() {
 
     /**
      * The data source this ViewModel will fetch results from.

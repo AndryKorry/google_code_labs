@@ -23,7 +23,7 @@ java {
 
 dependencies {
 
-     implementation project(':db_video_app')
+     implementation project(':db_main')
     
     //Core
     implementation androidx.coreKtx

@@ -10,7 +10,7 @@ import com.vynokurov.db_main.entity.MarsPhotoEntity
 @Dao
 interface MarsPhotoDao {
 
-    @Query("Select * From marsphoto")
+    @Query("Select * From mars_photo")
     fun getPhotos(): LiveData<List<MarsPhotoEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

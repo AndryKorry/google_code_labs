@@ -20,7 +20,7 @@ import com.vynokurov.app_video_viewer.databinding.DevbyteItemBinding
 import com.vynokurov.app_video_viewer.databinding.FragmentDevByteBinding
 import com.vynokurov.app_video_viewer.domain.DevByteVideo
 import com.vynokurov.app_video_viewer.viewmodels.DevByteViewModel
-import com.vynokurov.db_video_app.VideoAppDataBaseMaster
+import com.vynokurov.db_main.AppDataBaseMaster
 
 /**
  * Show a list of DevBytes on screen.
@@ -33,7 +33,7 @@ class DevByteFragment : Fragment() {
      * do in this Fragment.
      */
     private val viewModel: DevByteViewModel by activityViewModels {
-        DevByteViewModelFactory(VideoAppDataBaseMaster.getVideoDB(requireContext()).videoDao)
+        DevByteViewModelFactory(AppDataBaseMaster.getMainDB(requireContext()).videoDao)
     }
 
     /**

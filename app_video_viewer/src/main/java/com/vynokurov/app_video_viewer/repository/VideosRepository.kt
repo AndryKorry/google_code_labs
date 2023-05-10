@@ -6,7 +6,7 @@ import com.vynokurov.app_video_viewer.domain.DevByteVideo
 import com.vynokurov.app_video_viewer.network.DevByteNetwork
 import com.vynokurov.app_video_viewer.network.asDatabaseModel
 import com.vynokurov.app_video_viewer.network.asDomainModel
-import com.vynokurov.db_video_app.dao.VideoDao
+import com.vynokurov.db_main.dao.VideoDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
