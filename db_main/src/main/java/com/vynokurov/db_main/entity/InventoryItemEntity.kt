@@ -1,4 +1,4 @@
-package com.vynokurov.db_inventory_app.entity
+package com.vynokurov.db_main.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

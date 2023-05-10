@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.vynokurov.app_inventory.databinding.ItemListItemBinding
-import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
-import com.vynokurov.db_inventory_app.entity.getFormattedPrice
+import com.vynokurov.db_main.entity.InventoryItemEntity
+import com.vynokurov.db_main.entity.getFormattedPrice
 
 class InventoryItemListAdapter(private val onItemClicked: (InventoryItemEntity) -> Unit) :
     ListAdapter<InventoryItemEntity, InventoryItemListAdapter.InventoryItemViewHolder>(DiffCallback) {

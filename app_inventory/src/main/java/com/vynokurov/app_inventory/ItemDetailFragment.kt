@@ -11,8 +11,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.vynokurov.app_inventory.databinding.FragmentItemDetailBinding
-import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
-import com.vynokurov.db_inventory_app.entity.getFormattedPrice
+import com.vynokurov.db_main.AppDataBaseMaster
+import com.vynokurov.db_main.entity.InventoryItemEntity
+import com.vynokurov.db_main.entity.getFormattedPrice
 
 /**
  * [ItemDetailFragment] displays the details of the selected item.
@@ -21,7 +22,7 @@ class ItemDetailFragment : Fragment() {
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
     lateinit var item: InventoryItemEntity
     private val viewModel: InventoryViewModel by activityViewModels {
-        InventoryViewModelFactory(InventoryItemDataBaseMaster.getInventoryDb(requireContext()).inventoryItemDao())
+        InventoryViewModelFactory(AppDataBaseMaster.getMainDB(requireContext()).inventoryItemDao)
     }
 
     private var _binding: FragmentItemDetailBinding? = null

@@ -2,7 +2,7 @@ package com.vynokurov.app_inventory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.vynokurov.db_inventory_app.dao.InventoryItemDao
+import com.vynokurov.db_main.dao.InventoryItemDao
 
 class InventoryViewModelFactory(private val inventoryItemDao: InventoryItemDao): ViewModelProvider.Factory{
 

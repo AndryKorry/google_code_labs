@@ -9,6 +9,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vynokurov.app_inventory.databinding.ItemListFragmentBinding
+import com.vynokurov.db_main.AppDataBaseMaster
 
 /**
  * Main fragment displaying details for all items in the database.
@@ -16,7 +17,7 @@ import com.vynokurov.app_inventory.databinding.ItemListFragmentBinding
 class ItemListFragment : Fragment() {
 
     private val viewModel: InventoryViewModel by activityViewModels {
-        InventoryViewModelFactory(InventoryItemDataBaseMaster.getInventoryDb(requireContext()).inventoryItemDao())
+        InventoryViewModelFactory(AppDataBaseMaster.getMainDB(requireContext()).inventoryItemDao)
     }
 
     private var _binding: ItemListFragmentBinding? = null

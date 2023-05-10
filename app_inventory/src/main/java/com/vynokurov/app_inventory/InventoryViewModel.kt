@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
-import com.vynokurov.db_inventory_app.dao.InventoryItemDao
-import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
+import com.vynokurov.db_main.dao.InventoryItemDao
+import com.vynokurov.db_main.entity.InventoryItemEntity
 import kotlinx.coroutines.launch
 
 class InventoryViewModel(private val inventoryItemDao: InventoryItemDao) : ViewModel() {

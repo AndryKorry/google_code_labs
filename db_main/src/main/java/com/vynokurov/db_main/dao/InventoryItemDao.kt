@@ -1,4 +1,4 @@
-package com.vynokurov.db_inventory_app.dao
+package com.vynokurov.db_main.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
-import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
+import com.vynokurov.db_main.entity.InventoryItemEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

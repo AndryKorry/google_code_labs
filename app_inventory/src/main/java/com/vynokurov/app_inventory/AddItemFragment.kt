@@ -12,7 +12,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.vynokurov.app_inventory.databinding.FragmentAddItemBinding
-import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
+import com.vynokurov.db_main.AppDataBaseMaster
+import com.vynokurov.db_main.entity.InventoryItemEntity
 
 /**
  * Fragment to add or update an item in the Inventory database.
@@ -20,7 +21,7 @@ import com.vynokurov.db_inventory_app.entity.InventoryItemEntity
 class AddItemFragment : Fragment() {
 
     private val viewModel: InventoryViewModel by activityViewModels {
-        InventoryViewModelFactory(InventoryItemDataBaseMaster.getInventoryDb(requireContext()).inventoryItemDao())
+        InventoryViewModelFactory(AppDataBaseMaster.getMainDB(requireContext()).inventoryItemDao)
     }
     lateinit var item: InventoryItemEntity
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
